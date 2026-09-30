@@ -1,0 +1,35 @@
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment (uv uses .venv)
+venv/
+env/
+.venv/
+
+# uv lock file (regenerated from pyproject.toml)
+uv.lock
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploads & generated audio (user-generated)
+uploads/
+app/static/audio/*.wav
+app/static/audio/*.mp3
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
