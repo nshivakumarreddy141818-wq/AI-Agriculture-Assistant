@@ -47,7 +47,7 @@ AgriSaarthi AI is a **customized and extended version of an open-source agricult
 
 ## 🖥️ User Interface
 
-### 🌱 Welcome Screen
+### 🏠 Welcome Screen
 
 The AgriSaarthi AI welcome screen provides quick access to common farming assistance:
 
@@ -55,6 +55,10 @@ The AgriSaarthi AI welcome screen provides quick access to common farming assist
 - Disease Detection
 - Soil Health
 - Fertilizer Guide
+
+<p align="center">
+  <img src="Sample_image/welcome-screen.png" alt="AgriSaarthi AI Welcome Screen" width="850">
+</p>
 
 ### 🌐 Language Selection
 
@@ -65,11 +69,19 @@ Users can select their preferred language:
 - 🇮🇳 Kannada
 - 🇮🇳 Hindi
 
+<p align="center">
+  <img src="Sample_image/language-selection.png" alt="AgriSaarthi AI Language Selection" width="850">
+</p>
+
 ### 💬 AI Chat
 
 Users can communicate with AgriSaarthi AI through text, image and voice-based interaction.
 
----
+<p align="center">
+  <img src="Sample_image/chat-interface.png" alt="AgriSaarthi AI Chat Interface" width="850">
+</p>
+
+
 
 ## 👨‍🌾 My Farm Profile
 
@@ -83,6 +95,11 @@ The profile includes:
 - 💧 Irrigation Type
 - 📐 Land Size
 - 🌾 Crop Growth Stage
+
+
+<p align="center">
+  <img src="Sample_image/farm-profile.png" alt="AgriSaarthi AI My Farm Profile" width="850">
+</p>
 
 The saved information can be provided to the AI as supporting context when answering relevant questions.
 
