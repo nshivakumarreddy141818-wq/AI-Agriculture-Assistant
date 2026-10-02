@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Krishi Sahayak - AI Agriculture Assistant for Indian Farmers</title>
+    <title>AgriSaarthi AI - Your Intelligent Farming Companion</title>
 
-    <meta name="description" content="AI-powered agriculture assistant for Indian farmers. Get expert advice on crops, pest control, soil health, weather, government schemes, and farming practices. Supports voice, text, and image analysis.">
+    <meta name="description"
+        content="AgriSaarthi AI is an intelligent farming companion that helps farmers with crop advice, plant disease detection, soil guidance, and agricultural information using AI.">
 
-    <meta name="keywords" content="agriculture, farming, India, crops, pest control, soil health, AI assistant, chatbot, Kharif, Rabi, Zaid, wheat, rice, paddy, PM-KISAN, fertilizers, irrigation">
+    <meta name="keywords"
+        content="AgriSaarthi AI, agriculture, farming, India, crops, pest control, soil health, AI assistant, chatbot, crop disease, fertilizers, irrigation">
 
-    <meta name="author" content="Mohammed Ashraf">
+    <meta name="author" content="N Shiva Kumar Reddy & Team">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a1628">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://llm-agri-bot.onrender.com/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- =========================================================
+         CANONICAL URL
+         ========================================================= -->
+
+    <link rel="canonical" href="http://127.0.0.1:5000/">
+
+
+    <!-- =========================================================
+         OPEN GRAPH / FACEBOOK
+         ========================================================= -->
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://llm-agri-bot.onrender.com/">
-    <meta property="og:title" content="Krishi Sahayak - AI Agriculture Assistant for Indian Farmers">
-    <meta property="og:description" content="Get expert AI-powered advice on crops, pest control, soil health, weather, and government schemes. Supports voice, text, and image-based crop disease diagnosis.">
-    <meta property="og:image" content="https://llm-agri-bot.onrender.com/static/images/og-image.png">
-    <meta property="og:site_name" content="Krishi Sahayak">
+    <meta property="og:url" content="http://127.0.0.1:5000/">
+    <meta property="og:title" content="AgriSaarthi AI - Your Intelligent Farming Companion">
+    <meta property="og:description"
+        content="An intelligent AI agriculture assistant for crop advice, plant disease detection, soil guidance, and farming information.">
+    <meta property="og:site_name" content="AgriSaarthi AI">
     <meta property="og:locale" content="en_IN">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://llm-agri-bot.onrender.com/">
-    <meta name="twitter:title" content="Krishi Sahayak - AI Agriculture Assistant">
-    <meta name="twitter:description" content="AI-powered agriculture assistant for Indian farmers. Voice, text, and image-based crop advisory.">
-    <meta name="twitter:image" content="https://llm-agri-bot.onrender.com/static/images/og-image.png">
-    <meta name="twitter:creator" content="@mohammed97ashraf">
 
-    <!-- AI Crawlers -->
+    <!-- =========================================================
+         TWITTER CARD
+         ========================================================= -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AgriSaarthi AI - Your Intelligent Farming Companion">
+    <meta name="twitter:description"
+        content="AI-powered agriculture assistant for farmers with text, voice, and image analysis.">
+
+
+    <!-- =========================================================
+         AI CRAWLERS
+         ========================================================= -->
+
     <meta name="llms-txt" content="/llms.txt">
     <meta name="ai-content-declaration" content="human-reviewed">
 
-    <!-- Structured Data (JSON-LD) -->
+
+    <!-- =========================================================
+         STRUCTURED DATA
+         ========================================================= -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Krishi Sahayak",
-        "alternateName": "AI Agriculture Assistant",
-        "url": "https://llm-agri-bot.onrender.com",
-        "description": "AI-powered agriculture assistant for Indian farmers. Get expert advice on crops, pest control, soil health, weather, and government schemes.",
+        "name": "AgriSaarthi AI",
+        "alternateName": "Your Intelligent Farming Companion",
+        "url": "http://127.0.0.1:5000/",
+        "description": "AgriSaarthi AI is an intelligent agriculture assistant that helps farmers with crop advice, plant disease detection, soil guidance and agricultural information.",
         "applicationCategory": "AgricultureApplication",
         "operatingSystem": "Web Browser",
         "offers": {
@@ -55,194 +77,365 @@
             "priceCurrency": "INR"
         },
         "author": {
-            "@type": "Person",
-            "name": "Mohammed Ashraf",
-            "url": "https://www.linkedin.com/in/mohammed97ashraf",
-            "sameAs": [
-                "https://github.com/mohammed97ashraf",
-                "https://www.linkedin.com/in/mohammed97ashraf"
-            ]
+            "@type": "Organization",
+            "name": "N Shiva Kumar Reddy & Team"
         },
-        "inLanguage": ["en", "hi"],
+        "inLanguage": [
+            "en",
+            "te",
+            "kn",
+            "hi"
+        ],
         "featureList": [
-            "AI Crop Disease Diagnosis",
-            "Voice Input & Output",
+            "AI Crop Advice",
+            "Crop Disease Detection",
+            "Voice Input",
+            "Voice Output",
             "Agricultural Advisory",
-            "Government Scheme Information",
             "Image Analysis",
             "Multilingual Support"
-        ],
-        "screenshot": "https://llm-agri-bot.onrender.com/static/images/og-image.png"
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is Krishi Sahayak?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Krishi Sahayak is an AI-powered agriculture assistant that helps Indian farmers with crop advice, pest control, soil health, weather information, and government schemes."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can Krishi Sahayak diagnose crop diseases from photos?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, you can upload a photo of your crops and Krishi Sahayak will analyze it using AI vision to identify diseases, pests, and nutrient deficiencies."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is Krishi Sahayak free to use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, Krishi Sahayak is completely free to use. It provides AI-powered agricultural advisory at no cost."
-                }
-            }
         ]
     }
     </script>
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- =========================================================
+         BOOTSTRAP 5
+         ========================================================= -->
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/favicon.ico') }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <!-- =========================================================
+         BOOTSTRAP ICONS
+         ========================================================= -->
 
-    <link rel="alternate" hreflang="en" href="https://krishisahayak.vercel.app/">
-    <link rel="alternate" hreflang="hi" href="https://krishisahayak.vercel.app/?lang=hi">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet">
 
-    <link rel="author" href="https://github.com/mohammed97ashraf">
 
-    <link rel="manifest" href="{{ url_for('static', filename='manifest.webmanifest') }}">
+    <!-- =========================================================
+         GOOGLE FONT
+         ========================================================= -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         CUSTOM CSS
+         ========================================================= -->
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+
+    <!-- =========================================================
+         FAVICON
+         ========================================================= -->
+
+    <link rel="icon"
+        type="image/x-icon"
+        href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <link rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <link rel="apple-touch-icon"
+        href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+
+    <!-- =========================================================
+         MANIFEST
+         ========================================================= -->
+
+    <link rel="manifest"
+        href="{{ url_for('static', filename='manifest.webmanifest') }}">
+
 </head>
+
 
 <body>
 
-    <!-- ========== NAVBAR ========== -->
+
+    <!-- =========================================================
+         NAVBAR
+         ========================================================= -->
+
     <nav class="navbar">
+
         <div class="nav-inner">
 
+
+            <!-- Brand -->
+
             <a class="brand" href="/">
-                <span class="brand-icon">
-                    <i class="bi bi-flower2"></i>
+
+                <!-- AgriSaarthi Icon -->
+
+                <span class="brand-icon"
+                    style="background: transparent; box-shadow: none;">
+
+                    <img
+                        src="{{ url_for('static', filename='images/agrisaarthi-icon.png') }}"
+                        alt="AgriSaarthi AI"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+
                 </span>
-                <span>Krishi Sahayak</span>
+
+                <img
+                    src="{{ url_for('static', filename='images/agrisaarthi-wordmark.png') }}"
+                    alt="AgriSaarthi AI"
+                    class="brand-wordmark"
+                >
+
             </a>
+
+
+            <!-- Navigation Actions -->
 
             <div class="nav-actions">
 
-                <button class="nav-btn" id="clearBtn" title="Clear conversation">
+
+                <!-- New Chat -->
+
+                <button
+                    class="nav-btn"
+                    id="clearBtn"
+                    title="Clear conversation">
+
                     <i class="bi bi-trash3"></i>
-                    <span class="btn-label">New Chat</span>
+
+                    <span class="btn-label">
+                        New Chat
+                    </span>
+
+                </button>
+                <!-- My Farm -->
+                <button
+                    class="nav-btn"
+                    id="farmProfileBtn"
+                    title="My Farm">
+
+                    <i class="bi bi-house-heart"></i>
+
+                    <span class="btn-label">
+                        My Farm
+                    </span>
+
                 </button>
 
-                <button class="nav-btn" id="themeToggle" title="Toggle theme">
-                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+
+                <!-- Theme -->
+
+                <button
+                    class="nav-btn"
+                    id="themeToggle"
+                    title="Toggle theme">
+
+                    <i
+                        class="bi bi-moon-stars-fill"
+                        id="themeIcon">
+                    </i>
+
                 </button>
+
 
             </div>
+
         </div>
+
     </nav>
 
 
-    <!-- ========== MAIN ========== -->
+
+    <!-- =========================================================
+         MAIN CONTENT
+         ========================================================= -->
+
     <main class="main">
+
 
         <div class="chat-card">
 
-            <!-- Header -->
+
+            <!-- =================================================
+                 CHAT HEADER
+                 ================================================= -->
+
             <div class="card-header">
+
 
                 <div class="header-left">
 
-                    <div class="avatar">
-                        <i class="bi bi-flower2"></i>
+
+                    <!-- Bot Avatar -->
+
+                    <div class="avatar"
+                        style="background: transparent; box-shadow: none;">
+
+                        <img
+                            src="{{ url_for('static', filename='images/agrisaarthi-icon.png') }}"
+                            alt="AgriSaarthi AI"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+
                     </div>
+
+
+                    <!-- Bot Information -->
 
                     <div>
-                        <h5>Krishi Sahayak</h5>
+
+                        <img
+                            src="{{ url_for('static', filename='images/agrisaarthi-wordmark.png') }}"
+                            alt="AgriSaarthi AI"
+                            class="chat-wordmark"
+                        >
+
 
                         <span class="status">
+
                             <i class="bi bi-circle-fill"></i>
+
                             Online
+
                         </span>
+
                     </div>
+
 
                 </div>
 
-                <span class="date" id="dateDisplay"></span>
 
-            </div>
+                <!-- Date -->
 
-
-            <!-- Messages -->
-            <div class="messages" id="chatMessages"></div>
-
-
-            <!-- Typing -->
-            <div class="typing" id="typingIndicator">
-
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-
-                <span class="typing-label">
-                    Thinking...
+                <span
+                    class="date"
+                    id="dateDisplay">
                 </span>
 
+
             </div>
 
 
-            <!-- Image Preview -->
-            <div class="image-preview" id="imagePreview">
 
-                <img id="previewImg" src="" alt="Preview">
+            <!-- =================================================
+                 CHAT MESSAGES
+                 ================================================= -->
 
-                <button class="remove-image" id="removeImage" title="Remove image">
+            <div
+                class="messages"
+                id="chatMessages">
+            </div>
+
+
+
+            <!-- =================================================
+                 TYPING INDICATOR
+                 ================================================= -->
+
+            <div
+                class="typing"
+                id="typingIndicator">
+
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+
+                <span class="typing-label">
+                    AgriSaarthi AI is thinking...
+                </span>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 IMAGE PREVIEW
+                 ================================================= -->
+
+            <div
+                class="image-preview"
+                id="imagePreview">
+
+
+                <img
+                    id="previewImg"
+                    src=""
+                    alt="Selected crop image">
+
+
+                <button
+                    class="remove-image"
+                    id="removeImage"
+                    title="Remove image">
+
                     <i class="bi bi-x-lg"></i>
+
                 </button>
 
+
             </div>
 
 
-            <!-- Input -->
+
+            <!-- =================================================
+                 INPUT BAR
+                 ================================================= -->
+
             <div class="input-bar">
 
-                <button class="icon-btn" id="imageBtn" title="Upload image">
+
+                <!-- Image Upload -->
+
+                <button
+                    class="icon-btn"
+                    id="imageBtn"
+                    title="Upload crop image">
+
                     <i class="bi bi-image"></i>
+
                 </button>
+
 
                 <input
                     type="file"
                     id="imageInput"
                     accept="image/*"
                     class="d-none"
-                    title="Upload image"
-                    aria-label="Upload image"
+                    title="Upload crop image"
+                    aria-label="Upload crop image"
                 >
 
-                <button class="icon-btn mic" id="voiceBtn" title="Record voice">
+
+                <!-- Voice Input -->
+
+                <button
+                    class="icon-btn mic"
+                    id="voiceBtn"
+                    title="Record voice">
+
                     <i class="bi bi-mic"></i>
+
                 </button>
 
-                <form id="chatForm" class="input-row" autocomplete="off">
+
+
+                <!-- Chat Form -->
+
+                <form
+                    id="chatForm"
+                    class="input-row"
+                    autocomplete="off">
+
 
                     <input
                         type="text"
@@ -252,39 +445,75 @@
                         aria-label="Message"
                     >
 
+
+                    <!-- Send -->
+
                     <button
                         type="submit"
                         class="send-btn"
                         id="sendBtn"
-                        title="Send message"
-                    >
+                        title="Send message">
+
                         <i class="bi bi-send-fill"></i>
+
                     </button>
+
 
                 </form>
 
+
             </div>
 
+
         </div>
+
 
     </main>
 
 
-    <!-- Audio Player -->
-    <audio id="audioPlayer" class="d-none"></audio>
+
+    <!-- =========================================================
+         AUDIO PLAYER
+         ========================================================= -->
+
+    <audio
+        id="audioPlayer"
+        class="d-none">
+    </audio>
 
 
-    <!-- Footer -->
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
     <footer class="footer">
-        <p>Developed by NSKReddy &amp; Team</p>
+
+        <p>
+            Developed by NSKReddy &amp; Team
+        </p>
+
     </footer>
 
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- Custom JavaScript -->
-    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <!-- =========================================================
+         JQUERY
+         ========================================================= -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+
+
+
+    <!-- =========================================================
+         CUSTOM JAVASCRIPT
+         ========================================================= -->
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}">
+    </script>
+
 
 </body>
+
 </html>
