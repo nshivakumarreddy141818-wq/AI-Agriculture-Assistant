@@ -1,252 +1,365 @@
 <div align="center">
 
-# Krishi Sahayak
+# 🌱 AgriSaarthi AI
 
-### AI Agriculture Assistant for Indian Farmers
+### Your Intelligent Farming Companion
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.1-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
 [![Groq](https://img.shields.io/badge/Groq-LLM-F55036?style=flat-square&logo=fastapi&logoColor=white)](https://console.groq.com)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
-[![Deploy](https://img.shields.io/badge/Deploy-Render-41E065?style=flat-square&logo=render&logoColor=white)](https://llm-agri-bot.onrender.com)
 [![uv](https://img.shields.io/badge/uv-Package_Manager-DE5FE9?style=flat-square&logo=uv&logoColor=white)](https://docs.astral.sh/uv/)
 
-**Live Demo → [llm-agri-bot.onrender.com](https://llm-agri-bot.onrender.com)**
-
-An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pest control, soil health, weather, and government schemes — using text, voice, and image analysis.
-
-<br/>
-
-![Krishi Sahayak — Web Interface](Sample_image/chat-interface.png)
+**AI-powered assistance for smarter, healthier and more productive farming.**
 
 </div>
 
 ---
 
-## Features
+## 🌾 About AgriSaarthi AI
+
+**AgriSaarthi AI** is an AI-powered agriculture assistant designed to help farmers get practical farming guidance through a simple and user-friendly interface.
+
+The system can answer agriculture-related questions, analyze crop images, provide personalized suggestions based on a farmer's saved farm profile, and support multiple Indian languages.
+
+AgriSaarthi AI is a **customized and extended version of an open-source agriculture assistant project**, with additional features, redesigned interface, personalized farm context, and project-specific modifications.
+
+---
+
+## ✨ Features
 
 | Feature | Description |
 |---------|-------------|
-| Text Chat | Ask any agriculture question and get expert answers |
-| Image Diagnosis | Upload a crop photo → AI identifies diseases, pests & deficiencies |
-| Voice Input | Speak in English, Hindi, or Hinglish via Groq Whisper |
-| Voice Output | Bot reads answers aloud using Groq Orpheus TTS |
-| Conversation Memory | Remembers your chat context (Redis, with in-memory fallback) |
-| Prompt Caching | 50% cost savings — cached prefixes across requests |
-| Dark/Light Theme | Glassmorphism UI with one-click theme toggle |
-| Multilingual | Responds in English, Hindi, or Hinglish |
-
-![Krishi Sahayak — Voice Chat on Mobile](Sample_image/chat-2.png)
-
----
-
-## Tech Stack
-
-<table>
-<tr>
-<td><strong>Backend</strong></td>
-<td>Python 3.11+, Flask, Groq SDK</td>
-</tr>
-<tr>
-<td><strong>Frontend</strong></td>
-<td>HTML5, CSS3 (Glassmorphism), jQuery</td>
-</tr>
-<tr>
-<td><strong>LLM</strong></td>
-<td><code>openai/gpt-oss-120b</code> (text), <code>meta-llama/llama-4-scout-17b-16e-instruct</code> (vision)</td>
-</tr>
-<tr>
-<td><strong>Speech</strong></td>
-<td>Groq Whisper <code>whisper-large-v3-turbo</code> (STT), Groq Orpheus <code>canopylabs/orpheus-v1-english</code> (TTS)</td>
-</tr>
-<tr>
-<td><strong>Memory</strong></td>
-<td>Redis (with automatic in-memory fallback)</td>
-</tr>
-<tr>
-<td><strong>Deploy</strong></td>
-<td>Render, Docker, Gunicorn</td>
-</tr>
-</table>
+| 💬 **AI Text Chat** | Ask agriculture-related questions and receive AI-generated responses |
+| 🌿 **Crop Advice** | Get guidance related to crops, cultivation and crop management |
+| 🩺 **Disease Detection** | Upload a crop image and get AI-based disease analysis |
+| 🎙️ **Voice Input** | Ask questions using voice input |
+| 🔊 **Voice Output** | Receive AI responses with optional voice output |
+| 🌐 **Multilingual Support** | Supports English, Telugu, Kannada and Hindi |
+| 👨‍🌾 **My Farm Profile** | Save location, crop, soil, irrigation, land size and growth stage |
+| 🧠 **Personalized Responses** | Uses saved farm information as context when answering relevant questions |
+| 💾 **Conversation Memory** | Maintains conversation context using Redis with an in-memory fallback |
+| 🌱 **Quick Farming Options** | Quick access to Crop Advice, Disease Detection, Soil Health and Fertilizer Guide |
+| 🌓 **Light/Dark Theme** | User-friendly interface with theme support |
+| 📱 **Responsive Interface** | Designed for convenient use across different screen sizes |
 
 ---
 
-## Quick Start
+## 🖥️ User Interface
+
+### 🌱 Welcome Screen
+
+The AgriSaarthi AI welcome screen provides quick access to common farming assistance:
+
+- Crop Advice
+- Disease Detection
+- Soil Health
+- Fertilizer Guide
+
+### 🌐 Language Selection
+
+Users can select their preferred language:
+
+- 🇬🇧 English
+- 🇮🇳 Telugu
+- 🇮🇳 Kannada
+- 🇮🇳 Hindi
+
+### 💬 AI Chat
+
+Users can communicate with AgriSaarthi AI through text, image and voice-based interaction.
+
+---
+
+## 👨‍🌾 My Farm Profile
+
+AgriSaarthi AI includes a **My Farm Profile** feature that allows farmers to save important farm information.
+
+The profile includes:
+
+- 📍 Location
+- 🌱 Main Crop
+- 🪨 Soil Type
+- 💧 Irrigation Type
+- 📐 Land Size
+- 🌾 Crop Growth Stage
+
+The saved information can be provided to the AI as supporting context when answering relevant questions.
+
+### Example
+
+```text
+Location: Tirupati
+Main Crop: Tomato
+Soil Type: Red Soil
+Irrigation: Drip Irrigation
+Land Size: 2 acres
+Growth Stage: Flowering
+```
+---
+
+## 🧠 How It Works
+
+```text
+                    👨‍🌾 Farmer
+                        │
+                        ▼
+              ┌───────────────────┐
+              │   AgriSaarthi AI  │
+              │     Interface     │
+              └───────────────────┘
+                        │
+          ┌─────────────┼─────────────┐
+          ▼             ▼             ▼
+       💬 Text        🖼️ Image       🎙️ Voice
+          │             │             │
+          └─────────────┼─────────────┘
+                        ▼
+              ┌───────────────────┐
+              │   Flask Backend   │
+              └───────────────────┘
+                        │
+                        ▼
+              ┌───────────────────┐
+              │    Groq Models    │
+              │   LLM + Vision    │
+              └───────────────────┘
+                        │
+                        ▼
+              🌱 AI Agriculture
+                  Assistance
+                        │
+                        ▼
+              👨‍🌾 Farmer Response
+              ```
+
+              ---
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| **Backend** | Python, Flask |
+| **AI / LLM** | Groq API |
+| **Frontend** | HTML5, CSS3, JavaScript, jQuery |
+| **Image Analysis** | Vision-capable LLM |
+| **Speech-to-Text** | Groq Whisper |
+| **Text-to-Speech** | Groq TTS |
+| **Memory** | Redis with in-memory fallback |
+| **Package Management** | uv |
+| **Deployment Support** | Docker, Gunicorn, Render |
+
+---
+
+## 📂 Project Structure
+
+```text
+AI-Agriculture-Assistant/
+│
+├── app/
+│   ├── __init__.py
+│   ├── config.py
+│   │
+│   ├── routes/
+│   │   ├── main.py
+│   │   └── chat.py
+│   │
+│   ├── services/
+│   │   ├── llm_service.py
+│   │   ├── memory_service.py
+│   │   ├── stt_service.py
+│   │   ├── tts_service.py
+│   │   └── prompt_manager.py
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   ├── js/
+│   │   │   └── chat.js
+│   │   └── images/
+│   │       ├── agrisaarthi-icon.png
+│   │       ├── agrisaarthi-logo.png
+│   │       ├── agrisaarthi-wordmark.png
+│   │       └── farm-background.png
+│   │
+│   └── templates/
+│       └── index.html
+│
+├── Sample_image/
+├── .env.example
+├── Dockerfile
+├── gunicorn.conf.py
+├── LICENSE
+├── pyproject.toml
+├── requirements.txt
+├── render.yaml
+└── run.py
+```
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- **Python 3.11+**
-- **[uv](https://docs.astral.sh/uv/getting-started/installation/)** package manager
-- **[Groq API key](https://console.groq.com/keys)** (free tier available)
+- **Python 3.11 or higher**
+- **uv package manager**
+- **Groq API key**
 
-### 1. Clone & Install
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/mohammed97ashraf/LLM_Agri_Bot.git
-cd LLM_Agri_Bot
+git clone https://github.com/nshivakumarreddy141818-wq/AI-Agriculture-Assistant.git
+cd AI-Agriculture-Assistant
+```
+### 2. Install Dependencies
+
+```bash
 uv sync
 ```
 
-### 2. Configure
+### 3. Configure Environment Variables
 
-```bash
-cp .env.example LLM_Agri_Bot/.env
-```
-
-Edit `LLM_Agri_Bot/.env` and add your Groq API key:
+Create a `.env` file in the project root and add your Groq API key:
 
 ```env
-GROQ_API_KEY=gsk_your_key_here
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 3. Run
+> ⚠️ Never share your API key publicly or commit the `.env` file to GitHub.
+
+### 4. Run the Application
+
+Start the application using:
 
 ```bash
-uv run python LLM_Agri_Bot/run.py
+uv run python run.py
 ```
 
-Open **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
+Then open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
+
+The AgriSaarthi AI interface will open in your browser.
 
 ---
 
-## Environment Variables
+## 🌐 Supported Languages
 
-Copy `.env.example` to `LLM_Agri_Bot/.env` and configure:
+AgriSaarthi AI supports the following languages:
 
-| Variable | Required | Default | Description |
-|----------|:--------:|---------|-------------|
-| `GROQ_API_KEY` | Yes | — | Your Groq API key ([get one](https://console.groq.com/keys)) |
-| `LLM_MODEL` | No | `openai/gpt-oss-120b` | Text LLM model |
-| `LLM_VISION_MODEL` | No | `meta-llama/llama-4-scout-17b-16e-instruct` | Vision LLM model |
-| `LLM_TEMPERATURE` | No | `0.3` | Model temperature (0–2) |
-| `LLM_MAX_TOKENS` | No | `2048` | Max response tokens |
-| `STT_MODEL` | No | `whisper-large-v3-turbo` | Speech-to-text model |
-| `TTS_MODEL` | No | `canopylabs/orpheus-v1-english` | Text-to-speech model |
-| `TTS_VOICE` | No | `autumn` | TTS voice name |
-| `REDIS_HOST` | No | `localhost` | Redis host (optional — falls back to memory) |
-| `REDIS_PORT` | No | `6379` | Redis port |
-| `REDIS_SSL` | No | `false` | Enable Redis SSL |
-| `FLASK_SECRET_KEY` | Yes* | `dev-secret-key` | Flask session secret (*required in production) |
-| `FLASK_DEBUG` | No | `true` | Enable debug mode |
+- 🇬🇧 English
+- 🇮🇳 Telugu
+- 🇮🇳 Kannada
+- 🇮🇳 Hindi
+
+Users can select their preferred language before starting the conversation.
 
 ---
 
-## Project Structure
+## 🧠 AI Capabilities
 
-```
-LLM_Agri_Bot/
-├── app/
-│   ├── __init__.py             # App factory (create_app)
-│   ├── config.py               # Environment-based configuration
-│   ├── routes/
-│   │   ├── main.py             # Index page, robots.txt, sitemap, llms.txt
-│   │   └── chat.py             # Chat API (text, voice, image)
-│   ├── services/
-│   │   ├── llm_service.py      # Groq LLM + vision + prompt caching
-│   │   ├── memory_service.py   # Redis + in-memory fallback
-│   │   ├── stt_service.py      # Groq Whisper STT
-│   │   ├── tts_service.py      # Groq Orpheus TTS
-│   │   └── prompt_manager.py   # XML + CoT system prompt
-│   ├── static/
-│   │   ├── css/style.css       # Glassmorphism UI (dark/light)
-│   │   ├── js/chat.js          # Chat logic, image upload, voice
-│   │   └── images/             # Favicon
-│   └── templates/
-│       └── index.html          # Main template (SEO + JSON-LD)
-├── Sample_image/               # Screenshots for README
-├── llms.txt                    # AI crawler disclosure
-├── .env.example                # Environment template
-├── gunicorn.conf.py            # Production Gunicorn config
-├── Dockerfile                  # Docker deployment
-├── render.yaml                 # Render blueprint
-├── run.py                      # Dev entry point
-├── pyproject.toml              # uv / project config
-└── requirements.txt            # pip fallback
-```
+AgriSaarthi AI provides:
+
+- 💬 Agriculture-related question answering
+- 🌱 Crop and farming guidance
+- 🩺 Crop image analysis
+- 🎙️ Voice-based interaction
+- 👨‍🌾 Personalized responses using farm profile information
+- 🌐 Multilingual agriculture assistance
 
 ---
 
-## Deployment
+## 👨‍🌾 Example Use Case
 
-### Render (Recommended)
+A farmer can save their farm details such as:
 
-1. Push your code to GitHub
-2. Go to [render.com](https://render.com) → **New** → **Web Service**
-3. Connect your GitHub repo
-4. Render auto-detects `render.yaml` and `Dockerfile`
-5. Add your `GROQ_API_KEY` (and other env vars) in the Render dashboard
-6. Click **Deploy**
-
-### Docker
-
-```bash
-docker build -t krishi-sahayak .
-docker run -p 10000:10000 --env-file LLM_Agri_Bot/.env krishi-sahayak
+```text
+Location: Tirupati
+Main Crop: Tomato
+Soil Type: Red Soil
+Irrigation: Drip Irrigation
+Land Size: 2 acres
+Growth Stage: Flowering
 ```
+
+The farmer can then ask:
+
+```text
+What fertilizer should I use now?
+```
+
+AgriSaarthi AI can use the saved farm profile as supporting context when generating the response.
 
 ---
 
-## API Reference
+## 🔐 Privacy & API Key
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/` | Chat interface |
-| `POST` | `/chat` | Send text, image, or audio — returns AI response |
-| `POST` | `/chat/clear` | Clear conversation history |
-| `GET` | `/health` | Health check (Redis status) |
-| `GET` | `/robots.txt` | Search engine crawl rules |
-| `GET` | `/sitemap.xml` | XML sitemap |
-| `GET` | `/llms.txt` | AI crawler disclosure |
-| `GET` | `/.well-known/llms.txt` | AI crawler disclosure (well-known path) |
+The Groq API key is required to communicate with the AI services.
+
+For security:
+
+- Keep your API key private.
+- Store it in the `.env` file.
+- Do not upload `.env` to GitHub.
+- Use `.env.example` as a reference for required environment variables.
 
 ---
 
-## How It Works
+## 🌱 Project Purpose
 
-```
-User sends message (text / image / voice)
-        │
-        ▼
-┌─────────────────────────────────────────┐
-│  Flask Backend                          │
-│  ├── Text? → Groq LLM (gpt-oss-120b)  │
-│  ├── Image? → Llama 4 Scout (vision)   │
-│  └── Voice? → Whisper STT → LLM → TTS  │
-│                                         │
-│  Memory: Redis (or in-memory fallback)  │
-│  Cache:  Groq automatic prompt caching  │
-└─────────────────────────────────────────┘
-        │
-        ▼
-Response with text + optional voice audio
-```
+AgriSaarthi AI was developed as a project to explore how Artificial Intelligence can be applied to agriculture and provide accessible digital assistance to farmers.
+
+The project combines AI-based conversation, image analysis, voice interaction, multilingual support and personalized farm information into a single agriculture assistant.
 
 ---
 
-## Contributing
+## 🔗 Original Open-Source Project
 
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+AgriSaarthi AI is a **customized and extended version** of an open-source agriculture assistant project.
 
-```bash
-git checkout -b feature/your-feature
-uv sync
-# make changes
-git commit -m "Add your feature"
-git push origin feature/your-feature
-```
+### Original Project
+
+**Krishi Sahayak — AI Agriculture Assistant for Indian Farmers**
+
+**Original Author:** Mohammed Ashraf
+
+**Original Repository:**
+
+https://github.com/mohammed97ashraf/LLM_Agri_Bot
+
+The original project is licensed under the **MIT License**.
+
+The original `LICENSE` file and required copyright and permission notices have been retained in this repository.
 
 ---
 
-## License
+## 👨‍💻 Development
 
-MIT License — see [LICENSE](LICENSE)
+### AgriSaarthi AI
+
+**Developed by:** NSKReddy & Team
+
+This project includes customized UI design, AgriSaarthi AI branding, multilingual interface support, My Farm Profile functionality and personalized farm-context integration.
+
+---
+
+## 📜 License
+
+This project is distributed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for the complete license text.
 
 ---
 
 <div align="center">
 
-**Built with care for Indian farmers**
+### 🌱 AgriSaarthi AI
 
-By [Mohammed Ashraf](https://www.linkedin.com/in/mohammed97ashraf) · [GitHub](https://github.com/mohammed97ashraf) · [LinkedIn](https://www.linkedin.com/in/mohammed97ashraf)
+**Your Intelligent Farming Companion**
+
+🌱 Smarter Farming • 🤖 Artificial Intelligence • 👨‍🌾 Better Assistance
 
 </div>
